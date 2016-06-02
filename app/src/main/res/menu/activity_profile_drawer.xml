@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+<!--        <item
+            android:id="@+id/news"
+            android:icon="@android:drawable/ic_menu_set_as"
+            android:title="Новости" />-->
+        <item
+            android:id="@+id/messages"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Сообщения" />
+        <item
+            android:id="@+id/prizes"
+            android:icon="@android:drawable/star_big_on"
+            android:title="Призы" />
+<!--        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Настройки" />-->
+        <item
+            android:id="@+id/exit"
+            android:icon="@android:drawable/ic_menu_revert"
+            android:title="Выход" />
+    </group>
+
+    <item android:title="Идеи"
+          android:id="@+id/header_menu_ideas">
+        <menu android:id="@+id/menu_ideas">
+            <item
+                android:id="@+id/my_ideas"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Мои идеи" />
+            <item
+                android:id="@+id/send_idea"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Отправить идею" />
+            <item
+                android:id="@+id/infoMyPoints"
+                android:icon="@drawable/vallet"
+                android:title="Идёт расчёт баллов... " />
+        </menu>
+    </item>
+
+    <item android:title="Эксперт"
+        android:id="@+id/header_menu_expert">
+        <menu>
+            <item android:id="@+id/ideas_expert"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:title="Идеи на проверку">
+
+            </item>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="15dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvMessageDialogUser">
+
+        <AutoCompleteTextView
+            android:id="@+id/etMessageDialogUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/message_to"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="text|textMultiLine" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvMessageDialogText">
+
+        <AutoCompleteTextView
+            android:id="@+id/etMessageDialogText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/message_text"
+            android:lines="3"
+            android:maxLines="5"
+            android:singleLine="true"
+            android:inputType="text|textMultiLine" />
+
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

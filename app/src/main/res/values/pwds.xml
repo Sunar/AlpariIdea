@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="db_address">*</string>
+    <string name="db_login">*</string>
+    <string name="db_password">*</string>
+    <string name="robot_email">*@gmail.com</string>
+    <string name="robot_password">*</string>
+</resources>

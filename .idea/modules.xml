@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlpIdea.iml" filepath="$PROJECT_DIR$/AlpIdea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/activation/activation.iml" filepath="$PROJECT_DIR$/libs/activation/activation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/additional/additional.iml" filepath="$PROJECT_DIR$/libs/additional/additional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/mail/mail.iml" filepath="$PROJECT_DIR$/libs/mail/mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/mysql/mysql.iml" filepath="$PROJECT_DIR$/libs/mysql/mysql.iml" />
+    </modules>
+  </component>
+</project>
