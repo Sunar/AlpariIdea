@@ -66,7 +66,7 @@ public class IdeaDetailsFragment extends Fragment implements View.OnClickListene
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(position == 1){
-                    ((Button)llExpertBlock.findViewById(R.id.btnAcceptIdea)).setText("Принять идею");
+                    ((Button)llExpertBlock.findViewById(R.id.btnAcceptIdea)).setText(getString(R.string.accept_idea));
                 }
                 else
                     if (position > 1)

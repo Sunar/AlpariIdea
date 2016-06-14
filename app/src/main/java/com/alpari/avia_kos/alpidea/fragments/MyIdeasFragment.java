@@ -49,8 +49,8 @@ public class MyIdeasFragment extends ListFragment implements SwipeRefreshLayout.
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         pd = new ProgressDialog(getActivity());
-        pd.setTitle("Подождите");
-        pd.setMessage("Идёт получение списка ваших идей");
+        pd.setTitle(getString(R.string.wait));
+        pd.setMessage(getString(R.string.get_my_ideas_process));
         pd.show();
         GetMyIdeasTask task = new GetMyIdeasTask();
         task.execute();

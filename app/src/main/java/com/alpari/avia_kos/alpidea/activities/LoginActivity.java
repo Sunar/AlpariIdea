@@ -123,14 +123,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         switch (requestCode){
             case 1:
                 if(data == null){
-                    Toast.makeText(this, "Регистрация не удалась", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.reg_error), Toast.LENGTH_SHORT).show();
                     break;
                 }
-                mEmailView.setText(data.getStringExtra("name"));
-                mPasswordView.setText(data.getStringExtra("password"));
+                mEmailView.setText(data.getStringExtra(getString(R.string.login)));
+                mPasswordView.setText(data.getStringExtra(getString(R.string.password)));
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
-                Toast.makeText(this, "Успешно зарегистрирован", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.reg_success), Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -365,7 +365,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
             if(success == null){
-                Toast.makeText(LoginActivity.this, "Отсутствует связь с сервером", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, getString(R.string.no_connection), Toast.LENGTH_SHORT).show();
                 return;
             }
             if (success) {
@@ -373,7 +373,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 saveLoginPassword();
                 Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                 LoginActivity.this.startActivity(intent);
-                //Toast.makeText(LoginActivity.this, "Вы есть в базе, успех!", Toast.LENGTH_SHORT);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
@@ -407,18 +406,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             super.onPostExecute(aBoolean);
             if(aBoolean){
                 AlertDialog.Builder ad = new AlertDialog.Builder(LoginActivity.this);
-                String title = "Ваша версия устарела";
-                String content = "На сайте появилось обновление. Для продолжения работы необходимо скачать её";
-                ad.setTitle(title);  // заголовок
-                ad.setMessage(content); // сообщение
-                ad.setPositiveButton("Ок", new DialogInterface.OnClickListener() {
+                ad.setTitle(getString(R.string.old_client_dialog_title));  // заголовок
+                ad.setMessage(getString(R.string.old_client_dialog_content)); // сообщение
+                ad.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://chimcent.mi.ru/files/idea.apk"));
                         startActivity(browserIntent);
                         dialog.dismiss();
                     }
                 });
-                ad.setNegativeButton("В другой раз", new DialogInterface.OnClickListener() {
+                ad.setNegativeButton(getString(R.string.next_time), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
                         LoginActivity.this.finish();
                         System.exit(0);
@@ -433,16 +430,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private void saveLoginPassword(){
         sPref = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
-        ed.putString(getString(R.string.saved_login), mEmailView.getText().toString());
-        ed.putString(getString(R.string.saved_password), mPasswordView.getText().toString());
+        ed.putString(getString(R.string.login), mEmailView.getText().toString());
+        ed.putString(getString(R.string.password), mPasswordView.getText().toString());
         ed.commit();
     }
 
     private void loadLoginPassword(){
         sPref = getPreferences(MODE_PRIVATE);
-        String savedLogin = sPref.getString(getString(R.string.saved_login), "");
+        String savedLogin = sPref.getString(getString(R.string.login), "");
         mEmailView.setText(savedLogin);
-        String savedPassword = sPref.getString(getString(R.string.saved_password), "");
+        String savedPassword = sPref.getString(getString(R.string.password), "");
         mPasswordView.setText(savedPassword);
     }
 }

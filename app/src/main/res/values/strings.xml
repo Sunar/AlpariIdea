@@ -1,38 +1,130 @@
 <resources>
     <string name="app_name">Есть идея</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Вход</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_login">This login is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">Логин или пароль неверный</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="wait">Подождите</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="permission_rationale">Права нужны для автозаполнения</string>
+
+    <!-- Strings related to connection -->
     <string name="no_connection">Отсутствует соединение с сервером</string>
     <string name="unknown_error">Что-то не так</string>
-    <string name="saved_login">login</string>
-    <string name="saved_password">password</string>
+    <string name="error_occured">Произошла ошибка</string>
+    
+    <!-- Strings related to layouts -->
+        <!-- login -->
+        <string name="layout_login">Логин</string>
+        <string name="layout_password">Пароль</string>
+        <string name="layout_enter">Войти</string>
+        <string name="layout_register">Зарегистрироваться</string>
+        <string name="layout_profile">Личный кабинет</string>
+        <string name="background_image_description">Есть идея</string>
+        
+        <!-- registration -->
+        <string name="layout_registration">Регистрация</string>
+        <string name="layout_second_password">Пароль еще раз</string>
+        <string name="layout_full_name">ФИО Польностью</string>
+        <string name="layout_telephone">Телефон для связи</string>
+    
+        <!-- idea details -->
+        <string name="layout_idea">Идея:</string>
+        <string name="layout_resources">Ресурсы:</string>
+        <string name="layout_goals">Цели/Итоги:</string>
+        <string name="layout_realization_time">Сроки реализации:</string>
+        <string name="layout_send_to_committee">Отправлено на рассмотрение собранием</string>
+        <string name="layout_ruk_opinion">Мнение эксперта: пока неизвестно</string>
+        <string name="layout_accept_idea">Принять идею</string>
+        <string name="layout_reject_idea">Отклонить идею</string> 
+        <string name="layout_decided">Решение принято!</string>
+        <string name="layout_your_opinion">Ваше мнение:</string>
+        <string name="layout_send">Отправить</string>
+    
+        <!-- send idea -->
+        <string name="layout_idea_block">Выбери блок твоей идеи</string>
+        <string name="layout_idea_description">Опиши идею</string>
+        <string name="layout_idea_need">Что нам для этого необходимо?</string>
+        <string name="layout_idea_goals">Цели и итоги идеи</string>
+        <string name="layout_idea_rz_time">Когда нам ждать результатов?</string>
+        <string name="layout_idea_send">Отправить идею</string>
+    
+        <!-- templates -->
+        <string name="layout_tmp_from">From: %%%%%%%%%</string>
+        <string name="layout_tmp_empty">%%%%%%%%%%%</string>
+    
+    <!-- Strings related to login -->
+    <string name="action_sign_in_short">Вход</string>
+    <string name="error_invalid_login">Неправильный логин</string>
+    <string name="error_invalid_password">Пароль слишком короткий</string>
+    <string name="error_incorrect_password">Логин или пароль неверный</string>
+    <string name="error_field_required">Требуемые поля не заполнены</string>
     <string name="activity_login">Вход</string>
-    <string name="activity_reg">Регистрация</string>
-    <string name="title_activity_profile">Профиль</string>
+    <string name="login">login</string>
+    <string name="password">password</string>
+    <string name="reg_error">Регистрация не удалась</string>
+    <string name="reg_success">Успешно зарегистрирован</string>
+    
+    <string name="old_client_dialog_title">Ваша версия устарела</string>
+    <string name="old_client_dialog_content">На сайте появилось обновление. Для продолжения работы необходимо скачать её</string>
+    
+    <string name="next_time">В другой раз</string>
 
+    <!-- Strings related to registration -->
+    <string name="registration">Регистрация</string>
+    <string name="login_token">Логин занят</string>
+    <string name="passwords_dont_match">Пароли не совпадают</string>
+    <string name="login_field_is_empty">Логин обязателен для заполнения</string>
+    <string name="check_login">Проверка логина</string>
+    <string name="reg_data_error">Проверьте данные и попробуйте еще раз</string>
+    <string name="fio_is_empty">ФИО обязательно для заполнения!</string>
+
+    <!-- Strings related to profile -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="profile">Профиль</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- idea -->
+    <string name="get_expert_ideas_process">Идёт получение списка идей на проверку</string>
+    <string name="accept_idea">Принять идею</string>
+    <string name="get_my_ideas_process">Идёт получение списка ваших идей</string>
+    <string name="load_data">Загрузка данных…</string>
+    <string name="send_data">Отправка…</string>
+
+    <!--msg -->
     <string name="message_title">Новое сообщение</string>
     <string name="message_to">Пользователю</string>
     <string name="message_text">Введите текст сообщения</string>
     <string name="send">Отправить</string>
-    <string name="cancel">Отмена</string>
     <string name="sent">Отправлено</string>
     <string name="get">Получено</string>
     <string name="message_delivered">Сообщение успешно отправлено</string>
     <string name="message_not_delivered">Сообщение не отправлено</string>
-    <string name="action_settings">Settings</string>
+    <string name="get_messages_process">Идёт получение списка сообщений</string>
+    <string name="user_is_not_exist">Такого пользователя нет в базе</string>
+
+    <!--prize -->
+    <string name="get_prizes_process">Идёт получение списка призов</string>
+    <string name="prize_buying">Приобретение приза</string>
     <string name="congrats">Поздравляем с приобретением! С вами свяжутся в ближайшее время</string>
+    <string name="prize_warning">Вы собираетесь приобрести этот приз. Со счета спишется, баллов: </string>
+    <string name="point_is_not_enough">Недостаточно баллов</string>
+    <string name="operation_canceled">Операция отменена</string>
+    <string name="prize_bought">Подарок успешно приобретён</string>
+    <!-- titles -->
+    <string name="title_ideas">Идеи</string>
+    <string name="title_my_ideas">Мои идеи</string>
+    <string name="title_expert_ideas">Идеи на проверку</string>
+    <string name="title_messages">Сообщения</string>
+    <string name="title_prizes">Призы</string>
+    <string name="title_send_idea">Отправить идею</string>
+    <string name="title_exit">Выход</string>
+    <string name="title_points_process">Идёт расчёт баллов… </string>
+    <string name="title_points">На счету, баллов</string>
+    <string name="title_expert">Эксперт</string>
+    <string name="repeat_exit">Нажмите еще раз для выхода</string>
+
 </resources>

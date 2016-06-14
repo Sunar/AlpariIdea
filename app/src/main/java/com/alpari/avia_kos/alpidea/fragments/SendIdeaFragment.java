@@ -38,7 +38,7 @@ public class SendIdeaFragment extends Fragment implements View.OnClickListener{
 
         Spinner sIdeaTypes = (Spinner) frame.findViewById(R.id.sIdeaTypes);
         ArrayList<String> str = new ArrayList<>();
-        str.add("Загрузка данных...");
+        str.add(getString(R.string.load_data));
         adapter = new SpinnerAdapter(getActivity(), android.R.layout.simple_spinner_item, str);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sIdeaTypes.setAdapter(adapter);
@@ -55,7 +55,7 @@ public class SendIdeaFragment extends Fragment implements View.OnClickListener{
         String goal = ((EditText)frame.findViewById(R.id.etGoal)).getText().toString();
         String time = ((EditText)frame.findViewById(R.id.etRealizeTime)).getText().toString();
 
-        btnSend.setText("Отправка...");
+        btnSend.setText(getString(R.string.send_data));
         btnSend.setEnabled(false);
         SendIdeaTask task = new SendIdeaTask(type, content, res, goal, time);
         task.execute();
@@ -121,13 +121,13 @@ public class SendIdeaFragment extends Fragment implements View.OnClickListener{
                     showMyIdeas();
                 }
                 else {
-                    Toast.makeText(getActivity(), "Что-то не так", Toast.LENGTH_SHORT).show();
-                    btnSend.setText("Отправить");
+                    Toast.makeText(getActivity(), getString(R.string.unknown_error), Toast.LENGTH_SHORT).show();
+                    btnSend.setText(getString(R.string.send));
                     btnSend.setEnabled(true);
                 }
             } catch (NullPointerException e) {
-                Toast.makeText(getActivity(), "Что-то не так", Toast.LENGTH_SHORT).show();
-                btnSend.setText("Отправить");
+                Toast.makeText(getActivity(), getString(R.string.unknown_error), Toast.LENGTH_SHORT).show();
+                btnSend.setText(getString(R.string.send));
                 btnSend.setEnabled(true);
             }
         }
@@ -138,7 +138,7 @@ public class SendIdeaFragment extends Fragment implements View.OnClickListener{
             fTrans.commit();
             // set the toolbar title
             if (((AppCompatActivity)getActivity()).getSupportActionBar() != null) {
-                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Мои идеи");
+                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.title_my_ideas));
             }
         }
     }

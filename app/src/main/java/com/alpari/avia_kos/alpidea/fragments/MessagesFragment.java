@@ -70,8 +70,8 @@ public class MessagesFragment extends ListFragment implements SwipeRefreshLayout
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         pd = new ProgressDialog(getActivity());
-        pd.setTitle("Подождите");
-        pd.setMessage("Идёт получение списка сообщений");
+        pd.setTitle(getString(R.string.wait));
+        pd.setMessage(getString(R.string.get_messages_process));
         pd.show();
         GetMessagesTask task = new GetMessagesTask();
         task.execute();
@@ -229,7 +229,7 @@ public class MessagesFragment extends ListFragment implements SwipeRefreshLayout
         protected void onPostExecute(Boolean success) {
             super.onPostExecute(success);
             if(!success)
-                et.setError("Такого пользователя нет в базе");
+                et.setError(getString(R.string.user_is_not_exist));
         }
     }
 

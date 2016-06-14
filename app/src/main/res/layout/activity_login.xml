@@ -17,7 +17,8 @@
         android:layout_height="match_parent"
         android:id="@+id/imageView3"
         android:src="@drawable/ideya"
-        android:scaleType="center" />
+        android:scaleType="center"
+        android:contentDescription="@string/background_image_description" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -58,7 +59,7 @@
                     android:id="@+id/nickname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Логин"
+                    android:hint="@string/layout_login"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:inputType="textEmailAddress" />
@@ -74,7 +75,7 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Пароль"
+                    android:hint="@string/layout_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
@@ -92,7 +93,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginRight="50dp"
-                    android:text="Войти"
+                    android:text="@string/layout_enter"
                     android:background="@drawable/button_style"
                     android:textStyle="bold"
                     android:textColor="#ffffff"
@@ -102,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Зарегистрироваться"
+                    android:text="@string/layout_register"
                     android:id="@+id/tvRegistration"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"

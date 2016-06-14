@@ -8,7 +8,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView4"
         android:src="@drawable/ideya"
-        android:scaleType="center" />
+        android:scaleType="center"
+        android:contentDescription="@string/background_image_description" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,11 +26,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Регистрация"
+            android:text="@string/layout_registration"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:textColor="@color/material_deep_teal_200" />
+            android:textColor="@color/colorPrimary" />
 
         <EditText
             android:layout_width="match_parent"
@@ -37,7 +38,7 @@
             android:ems="10"
             android:id="@+id/etLogin"
             android:inputType="text"
-            android:hint="Логин" />
+            android:hint="@string/layout_login" />
 
         <EditText
             android:layout_width="match_parent"
@@ -45,7 +46,7 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassword"
-            android:hint="Пароль" />
+            android:hint="@string/layout_password" />
 
         <EditText
             android:layout_width="match_parent"
@@ -53,24 +54,23 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassword2"
-            android:hint="Пароль еще раз" />
+            android:hint="@string/layout_second_password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etFIO"
-            android:hint="ФИО Полностью" />
+            android:hint="@string/layout_full_name" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etTel"
-            android:hint="Телефон для связи" />
+            android:hint="@string/layout_telephone" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Я эксперт (надо ждать подтверждения)"
             android:id="@+id/cbExpert"
             android:enabled="true"
             android:visibility="gone" />
@@ -78,7 +78,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Зарегистрироваться"
+            android:text="@string/layout_register"
             android:id="@+id/btnRegister"
             android:layout_gravity="center_horizontal"
             android:clickable="false"

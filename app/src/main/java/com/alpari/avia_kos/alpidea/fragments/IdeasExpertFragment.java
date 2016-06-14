@@ -49,8 +49,8 @@ public class IdeasExpertFragment extends ListFragment implements SwipeRefreshLay
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         pd = new ProgressDialog(getActivity());
-        pd.setTitle("Подождите");
-        pd.setMessage("Идёт получение списка идей на проверку");
+        pd.setTitle(getString(R.string.wait));
+        pd.setMessage(getString(R.string.get_expert_ideas_process));
         pd.show();
         GetIdeasExpertTask task = new GetIdeasExpertTask();
         task.execute();

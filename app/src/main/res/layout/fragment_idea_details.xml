@@ -23,7 +23,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Идея:"
+                    android:text="@string/layout_idea"
                     android:id="@+id/textView3"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
@@ -33,7 +33,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Детали"
                     android:id="@+id/tvIdeaContent"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp" />
@@ -42,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Ресурсы:"
+                    android:text="@string/layout_resources"
                     android:layout_marginLeft="5dp"
                     android:layout_marginBottom="5dp" />
 
@@ -50,7 +49,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
                     android:id="@+id/tvIdeaRes"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp" />
@@ -59,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Цели/Итоги:"
+                    android:text="@string/layout_goals"
                     android:layout_marginLeft="5dp"
                     android:layout_marginBottom="5dp" />
 
@@ -67,7 +65,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
                     android:id="@+id/tvIdeaGoal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp" />
@@ -76,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Сроки реализации:"
+                    android:text="@string/layout_realization_time"
                     android:id="@+id/textView6"
                     android:layout_marginLeft="5dp"
                     android:layout_marginBottom="5dp" />
@@ -85,7 +82,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
                     android:id="@+id/tvIdeaTime"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp" />
@@ -107,7 +103,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Отправлено на рассмотрение собранием"
+                    android:text="@string/layout_send_to_committee"
                     android:id="@+id/tvSendDiscuss"
                     android:layout_gravity="center_horizontal"
                     android:visibility="gone" />
@@ -129,7 +125,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/tvRukDecision"
                     android:layout_gravity="center_horizontal"
-                    android:text="Мнение эксперта: пока неизвестно"
+                    android:text="@string/layout_ruk_opinion"
                     android:visibility="gone" />
 
                 <LinearLayout
@@ -143,7 +139,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Принять идею"
+                        android:text="@string/layout_accept_idea"
                         android:id="@+id/btnAcceptIdea"
                         android:layout_weight="0.5"
                         android:background="@drawable/button_style"
@@ -154,7 +150,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Отклонить идею"
+                        android:text="@string/layout_reject_idea"
                         android:id="@+id/btnRejectIdea"
                         android:layout_weight="0.5"
                         android:background="@drawable/button_style"
@@ -166,7 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Решение принято!"
+                    android:text="@string/layout_decided"
                     android:id="@+id/tvDecision"
                     android:layout_gravity="center_horizontal"
                     android:textColor="#000000"
@@ -185,7 +181,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Ваше мнение:" />
+                    android:text="@string/layout_your_opinion" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -199,7 +195,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Отправить"
+                    android:text="@string/layout_send"
                     android:id="@+id/btnSendRukDecision"
                     android:background="@drawable/button_style"
                     android:textColor="#ffffff"

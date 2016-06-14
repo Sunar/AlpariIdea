@@ -32,8 +32,8 @@ public class PrizesFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         pd = new ProgressDialog(getActivity());
-        pd.setTitle("Подождите");
-        pd.setMessage("Идёт получение списка призов");
+        pd.setTitle(getString(R.string.wait));
+        pd.setMessage(getString(R.string.get_prizes_process));
         pd.show();
         GetPrizesTask task = new GetPrizesTask();
         task.execute();
@@ -45,30 +45,30 @@ public class PrizesFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         final Prize prize = (Prize)l.getItemAtPosition(position);
         AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
-        String title = "Приобретение приза";
-        String content = "Вы собираетесь приобрести этот приз. Со счета спишется " + prize.getPoint() + " баллов";
+        String title = getString(R.string.prize_buying);
+        String content = getString(R.string.prize_warning) + prize.getPoint();
         ad.setTitle(title);  // заголовок
         ad.setMessage(content); // сообщение
-        ad.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+        ad.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int arg1) {
                 if(User.getInstance().getCurrentPoints() >= prize.getPoint()){
                     BuyPrizeTask task = new BuyPrizeTask();
                     task.execute(prize);
                 }
-                else Toast.makeText(getActivity(), "Недостаточно баллов",
+                else Toast.makeText(getActivity(), getString(R.string.point_is_not_enough),
                         Toast.LENGTH_SHORT).show();
             }
         });
-        ad.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+        ad.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int arg1) {
-                Toast.makeText(getActivity(), "Операция отменена",
+                Toast.makeText(getActivity(), getString(R.string.operation_canceled),
                         Toast.LENGTH_SHORT).show();
             }
         });
         ad.setCancelable(true);
         ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
             public void onCancel(DialogInterface dialog) {
-                Toast.makeText(getActivity(), "Операция отменена",
+                Toast.makeText(getActivity(), getString(R.string.operation_canceled),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -124,11 +124,11 @@ public class PrizesFragment extends ListFragment {
         protected void onPostExecute(final Boolean success) {
             super.onPostExecute(success);
             if(success){
-                Toast.makeText(getActivity(), "Подарок успешно приобретён", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.prize_bought), Toast.LENGTH_SHORT).show();
                 ((ProfileActivity)getActivity()).new GetPointsStatusesMessagesIdeas().execute();
             }
             else {
-                Toast.makeText(getActivity(), "Произошла ошибка", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.error_occured), Toast.LENGTH_SHORT).show();
             }
         }
 

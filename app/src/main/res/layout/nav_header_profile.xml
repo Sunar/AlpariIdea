@@ -18,13 +18,14 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/ideya"
         android:scaleType="fitStart"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/background_image_description" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Android Studio"
+        android:text="@string/layout_tmp_empty"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:id="@+id/tvName" />
 
@@ -32,6 +33,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Личный кабинет" />
+        android:text="@string/layout_profile" />
 
 </LinearLayout>

@@ -52,7 +52,7 @@ public class IdeaStatus implements Serializable{
         if(User.getInstance().getId() == DB.ANALITIK_ID)
             return id == IDEA_ACCEPTED;
         else if(User.getInstance().isExpert())
-            return id == UNDER_CONSIDERING || id == RUK_DECIDED;
+            return id == NOT_CONSIDERED || id == UNDER_CONSIDERING || id == RUK_DECIDED;
         else if(User.getInstance().isRuk())
             return id == SENT_TO_RUK;
         return false;

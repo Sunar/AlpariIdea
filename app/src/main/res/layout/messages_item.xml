@@ -16,7 +16,8 @@
             android:src="@android:drawable/ic_dialog_email"
             android:scaleType="centerInside"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/background_image_description" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -34,14 +35,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="От: %username%"
+                android:text="@string/layout_tmp_from"
                 android:id="@+id/tvMsgFrom" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="%message%"
+                android:text="@string/layout_tmp_empty"
                 android:id="@+id/tvMsg"
                 android:textColor="#000000"
                 android:layout_marginBottom="5dp" />

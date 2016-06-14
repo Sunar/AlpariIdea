@@ -58,11 +58,11 @@ public class ProfileActivity extends AppCompatActivity
         FragmentTransaction fTrans = getSupportFragmentManager().beginTransaction();
         String title;
         if(User.getInstance().isExpert() || User.getInstance().isRuk()){
-            title = "Идеи на проверку";
+            title = getString(R.string.title_expert_ideas);
             fTrans.replace(R.id.flContent, new IdeasExpertFragment());
         }
         else {
-            title = "Мои идеи";
+            title = getString(R.string.title_my_ideas);
             fTrans.replace(R.id.flContent, new MyIdeasFragment());
         }
 
@@ -108,7 +108,7 @@ public class ProfileActivity extends AppCompatActivity
             }
 
             this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(this, "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.repeat_exit), Toast.LENGTH_SHORT).show();
 
             new Handler().postDelayed(new Runnable() {
 
@@ -153,16 +153,16 @@ public class ProfileActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.messages) {
-            title = "Сообщения";
+            title = getString(R.string.title_messages);
             fragment = new MessagesFragment();
         } else if (id == R.id.prizes) {
-            title = "Призы";
+            title = getString(R.string.title_prizes);
             fragment = new PrizesFragment();
         } else if (id == R.id.my_ideas) {
-            title = "Мои идеи";
+            title = getString(R.string.title_my_ideas);
             fragment = new MyIdeasFragment();
         } else if (id == R.id.send_idea) {
-            title = "Есть идея";
+            title = getString(R.string.title_send_idea);
             fragment = new SendIdeaFragment();
         } else if (id == R.id.exit) {
             Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
@@ -170,7 +170,7 @@ public class ProfileActivity extends AppCompatActivity
             User.getInstance().exit();
             finish();
         } else if (id == R.id.ideas_expert) {
-            title = "Идеи на проверку";
+            title = getString(R.string.title_expert_ideas);
             fragment = new IdeasExpertFragment();
         }
 
@@ -211,18 +211,18 @@ public class ProfileActivity extends AppCompatActivity
             super.onPostExecute(points);
             user.setCurrentPoints(points);
             MenuItem miPoints = menu.findItem(R.id.infoMyPoints);
-            miPoints.setTitle("На счету, баллов: " + points);
+            miPoints.setTitle(getString(R.string.title_points) + ": " + points);
 
             MenuItem miMessages = menu.findItem(R.id.messages);
             int newMsg = user.newMessagesCount();
-            miMessages.setTitle((newMsg == 0)? "Сообщения" : "Сообщения (" + newMsg + ")");
+            miMessages.setTitle((newMsg == 0)? getString(R.string.title_messages) : getString(R.string.title_messages) + " (" + newMsg + ")");
 
             if(!user.isExpert() && !user.isRuk())
                 return;
 
             int newIdeas = user.newIdeasCount();
             MenuItem miIdea = menu.findItem(R.id.ideas_expert);
-            miIdea.setTitle((newIdeas == 0)? "Идеи на проверку" : "Идеи на проверку (" + newIdeas + ")");
+            miIdea.setTitle((newIdeas == 0)? getString(R.string.title_expert_ideas) : getString(R.string.title_expert_ideas) + " (" + newIdeas + ")");
         }
 
     }

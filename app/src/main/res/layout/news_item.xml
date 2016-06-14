@@ -7,16 +7,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Theme"
         android:id="@+id/tvTheme"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+        android:text="@string/layout_tmp_empty" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Information"
         android:id="@+id/tvNewsItem"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:text="@string/layout_tmp_empty" />
 </LinearLayout>

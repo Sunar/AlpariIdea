@@ -9,11 +9,11 @@
         <item
             android:id="@+id/messages"
             android:icon="@android:drawable/ic_dialog_email"
-            android:title="Сообщения" />
+            android:title="@string/title_messages" />
         <item
             android:id="@+id/prizes"
             android:icon="@android:drawable/star_big_on"
-            android:title="Призы" />
+            android:title="@string/title_prizes" />
 <!--        <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
@@ -21,33 +21,33 @@
         <item
             android:id="@+id/exit"
             android:icon="@android:drawable/ic_menu_revert"
-            android:title="Выход" />
+            android:title="@string/title_exit" />
     </group>
 
-    <item android:title="Идеи"
+    <item android:title="@string/title_ideas"
           android:id="@+id/header_menu_ideas">
         <menu android:id="@+id/menu_ideas">
             <item
                 android:id="@+id/my_ideas"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Мои идеи" />
+                android:title="@string/title_my_ideas"/>
             <item
                 android:id="@+id/send_idea"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Отправить идею" />
+                android:title="@string/title_send_idea" />
             <item
                 android:id="@+id/infoMyPoints"
                 android:icon="@drawable/vallet"
-                android:title="Идёт расчёт баллов... " />
+                android:title="@string/title_points_process" />
         </menu>
     </item>
 
-    <item android:title="Эксперт"
+    <item android:title="@string/title_expert"
         android:id="@+id/header_menu_expert">
         <menu>
             <item android:id="@+id/ideas_expert"
                 android:icon="@android:drawable/ic_menu_agenda"
-                android:title="Идеи на проверку">
+                android:title="@string/title_expert_ideas">
 
             </item>
         </menu>

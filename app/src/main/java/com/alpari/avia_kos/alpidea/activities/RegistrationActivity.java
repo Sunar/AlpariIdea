@@ -63,12 +63,12 @@ public class RegistrationActivity extends Activity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(!hasFocus){
                     if(((EditText)v).getText().toString().equals("")){
-                        Toast.makeText(RegistrationActivity.this, "Логин обязателен для заполнения", Toast.LENGTH_SHORT);
+                        Toast.makeText(RegistrationActivity.this, getString(R.string.login_field_is_empty), Toast.LENGTH_SHORT);
                         return;
                     }
                     pd = new ProgressDialog(RegistrationActivity.this);
-                    pd.setTitle("Подождите");
-                    pd.setMessage("Проверка логина");
+                    pd.setTitle(getString(R.string.wait));
+                    pd.setMessage(getString(R.string.check_login));
                     pd.show();
                     CheckLoginTask task = new CheckLoginTask(etLogin.getText().toString());
                     task.execute((Void)null);
@@ -95,11 +95,11 @@ public class RegistrationActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if(etLogin.getError() != null || etPassword2.getError() != null){
-                    Toast.makeText(RegistrationActivity.this, "Проверьте данные и попробуйте еще раз", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, getString(R.string.reg_data_error), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(etFIO.getText().toString().equals("")){
-                    Toast.makeText(RegistrationActivity.this, "ФИО обязательно для заполнения!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, getString(R.string.fio_is_empty), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 h.sendEmptyMessage(START_REGISTRATION);
@@ -165,8 +165,8 @@ public class RegistrationActivity extends Activity {
 
             try {
                 Intent intent = new Intent();
-                intent.putExtra("name", etLogin.getText().toString());
-                intent.putExtra("password", etPassword.getText().toString());
+                intent.putExtra(getString(R.string.login), etLogin.getText().toString());
+                intent.putExtra(getString(R.string.password), etPassword.getText().toString());
                 setResult(RESULT_OK, intent);
                 finish();
             } finally {
@@ -195,19 +195,19 @@ public class RegistrationActivity extends Activity {
                         activity.etLogin.setError(null);
                         break;
                     case LOGIN_ALREADY_EXISTS:
-                        activity.etLogin.setError("Логин занят");
+                        activity.etLogin.setError(activity.getString(R.string.login_token));
                         activity.pd.dismiss();
                         break;
                     case PASSWORDS_DONT_MATCH:
-                        activity.etPassword2.setError("Пароли не совпадают");
+                        activity.etPassword2.setError(activity.getString(R.string.passwords_dont_match));
                         break;
                     case PASSWORDS_CORRECT:
                         activity.etPassword2.setError(null);
                         break;
                     case START_REGISTRATION:
                         activity.pd = new ProgressDialog(activity);
-                        activity.pd.setTitle("Подождите");
-                        activity.pd.setMessage("Регистрация");
+                        activity.pd.setTitle(activity.getString(R.string.wait));
+                        activity.pd.setMessage(activity.getString(R.string.registration));
                         activity.pd.show();
                         break;
                     case END_REGISTRATION:

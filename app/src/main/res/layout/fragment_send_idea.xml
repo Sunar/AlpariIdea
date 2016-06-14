@@ -18,7 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Выбери блок твоей идеи"
+                android:text="@string/layout_idea_block"
                 android:id="@+id/textView2"
                 android:layout_marginTop="10dp" />
 
@@ -37,7 +37,7 @@
                     android:id="@+id/etIdea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Опиши идею"
+                    android:hint="@string/layout_idea_description"
                     android:maxLines="4"
                     android:singleLine="true"
                     android:inputType="text|textMultiLine" />
@@ -53,7 +53,7 @@
                     android:id="@+id/etRes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Что нам для этого необходимо?"
+                    android:hint="@string/layout_idea_need"
                     android:maxLines="3"
                     android:singleLine="true"
                     android:inputType="text|textMultiLine" />
@@ -69,7 +69,7 @@
                     android:id="@+id/etGoal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Цели/итоги идеи"
+                    android:hint="@string/layout_idea_goals"
                     android:maxLines="4"
                     android:singleLine="true"
                     android:inputType="text|textMultiLine" />
@@ -85,7 +85,7 @@
                     android:id="@+id/etRealizeTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Когда нам ждать результатов?"
+                    android:hint="@string/layout_idea_rz_time"
                     android:maxLines="4"
                     android:singleLine="true"
                     android:inputType="text|textMultiLine" />
@@ -95,7 +95,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Отправить идею"
+                android:text="@string/layout_idea_send"
                 android:id="@+id/btnSendIdea"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/button_style"
